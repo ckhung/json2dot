@@ -1,0 +1,227 @@
+digraph structs {
+
+    node [shape=plaintext]
+    rankdir=LR;
+
+    root [label=" "; shape=circle;];
+N0000[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">FeatureCollection</td></tr><tr><td>features</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>crs</td><td PORT="p_2"></td></tr></table>>];
+
+root -> N0000
+N0001[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td border="0">1</td><td PORT="p_1"></td></tr><tr><td border="0">2</td><td PORT="p_2"></td></tr><tr><td border="0">3</td><td PORT="p_3"></td></tr><tr><td border="0">4</td><td PORT="p_4"></td></tr><tr><td border="0">5</td><td PORT="p_5"></td></tr><tr><td border="0">6</td><td PORT="p_6"></td></tr><tr><td border="0">7</td><td PORT="p_7"></td></tr><tr><td border="0">8</td><td PORT="p_8"></td></tr><tr><td border="0">9</td><td PORT="p_9"></td></tr></table>>];
+
+N0002[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Feature</td></tr><tr><td>geometry</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>properties</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_0 -> N0002
+N0003[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Point</td></tr><tr><td>coordinates</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>>];
+
+N0002:p_1 -> N0003
+N0004[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">121.5225005</td></tr><tr><td border="0">1</td><td PORT="p_1">25.0269534</td></tr></table>>];
+
+N0003:p_1 -> N0004
+N0005[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">捷運古亭站</td></tr></table>>];
+
+N0002:p_2 -> N0005
+N0006[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Feature</td></tr><tr><td>geometry</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>properties</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_1 -> N0006
+N0007[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0006:p_1 -> N0007
+N0008[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">121.505138</td></tr><tr><td border="0">1</td><td PORT="p_1">24.993818</td></tr></table>>];
+
+N0007:p_0 -> N0008
+N0009[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">捷運景安站</td></tr></table>>];
+
+N0006:p_2 -> N0009
+N0010[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Feature</td></tr><tr><td>geometry</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>properties</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_2 -> N0010
+N0011[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0010:p_1 -> N0011
+N0012[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.7151341</td></tr><tr><td border="0">1</td><td PORT="p_1">24.0687029</td></tr></table>>];
+
+N0011:p_0 -> N0012
+N0013[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">朝陽科技大學</td></tr></table>>];
+
+N0010:p_2 -> N0013
+N0014[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>geometry</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Feature</td></tr><tr><td>properties</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_3 -> N0014
+N0015[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0014:p_0 -> N0015
+N0016[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.675114</td></tr><tr><td border="0">1</td><td PORT="p_1">24.12395</td></tr></table>>];
+
+N0015:p_0 -> N0016
+N0017[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">中興大學</td></tr></table>>];
+
+N0014:p_2 -> N0017
+N0018[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>properties</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Feature</td></tr><tr><td>geometry</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_4 -> N0018
+N0019[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">省議會公車站</td></tr></table>>];
+
+N0018:p_0 -> N0019
+N0020[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Point</td></tr><tr><td>coordinates</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>>];
+
+N0018:p_2 -> N0020
+N0021[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.696647</td></tr><tr><td border="0">1</td><td PORT="p_1">24.055174</td></tr></table>>];
+
+N0020:p_1 -> N0021
+N0022[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>properties</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Feature</td></tr><tr><td>geometry</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_5 -> N0022
+N0023[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">世界一水果專賣店</td></tr></table>>];
+
+N0022:p_0 -> N0023
+N0024[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0022:p_2 -> N0024
+N0025[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.296128</td></tr><tr><td border="0">1</td><td PORT="p_1">22.616586</td></tr></table>>];
+
+N0024:p_0 -> N0025
+N0026[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Feature</td></tr><tr><td>geometry</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>properties</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_6 -> N0026
+N0027[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Point</td></tr><tr><td>coordinates</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>>];
+
+N0026:p_1 -> N0027
+N0028[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.297508</td></tr><tr><td border="0">1</td><td PORT="p_1">22.623637</td></tr></table>>];
+
+N0027:p_1 -> N0028
+N0029[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">亞蒂米德式廚房</td></tr></table>>];
+
+N0026:p_2 -> N0029
+N0030[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>properties</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>geometry</td><td PORT="p_1"></td></tr><tr><td>type</td><td PORT="p_2">Feature</td></tr></table>>];
+
+N0001:p_7 -> N0030
+N0031[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">Sapulo 糕餅小舖</td></tr></table>>];
+
+N0030:p_0 -> N0031
+N0032[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">Point</td></tr><tr><td>coordinates</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>>];
+
+N0030:p_1 -> N0032
+N0033[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">120.282616</td></tr><tr><td border="0">1</td><td PORT="p_1">22.625667</td></tr></table>>];
+
+N0032:p_1 -> N0033
+N0034[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>properties</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Feature</td></tr><tr><td>geometry</td><td PORT="p_2"></td></tr></table>>];
+
+N0001:p_8 -> N0034
+N0035[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">高鐵新竹站</td></tr></table>>];
+
+N0034:p_0 -> N0035
+N0036[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0034:p_2 -> N0036
+N0037[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">121.0403252</td></tr><tr><td border="0">1</td><td PORT="p_1">24.8081324</td></tr></table>>];
+
+N0036:p_0 -> N0037
+N0038[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>properties</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>geometry</td><td PORT="p_1"></td></tr><tr><td>type</td><td PORT="p_2">Feature</td></tr></table>>];
+
+N0001:p_9 -> N0038
+N0039[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">花蓮鯉魚潭</td></tr></table>>];
+
+N0038:p_0 -> N0039
+N0040[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>coordinates</td><td PORT="p_0">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td>type</td><td PORT="p_1">Point</td></tr></table>>];
+
+N0038:p_1 -> N0040
+N0041[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td border="0">0</td><td PORT="p_0">121.505907</td></tr><tr><td border="0">1</td><td PORT="p_1">23.928386</td></tr></table>>];
+
+N0040:p_0 -> N0041
+N0000:p_1 -> N0001
+N0042[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>type</td><td PORT="p_0">name</td></tr><tr><td>properties</td><td PORT="p_1">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>>];
+
+N0000:p_2 -> N0042
+N0043[label=<
+<table border="0" cellborder="1" cellspacing="0">
+<tr><td>name</td><td PORT="p_0">urn:ogc:def:crs:OGC:1.3:CRS84</td></tr></table>>];
+
+N0042:p_1 -> N0043
+}

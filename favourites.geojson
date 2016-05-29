@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "捷運古亭站"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5225005,
+          25.0269534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "捷運景安站"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.505138,
+          24.993818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "朝陽科技大學"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.7151341,
+          24.0687029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中興大學"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.675114,
+          24.12395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "省議會公車站"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.696647,
+          24.055174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "世界一水果專賣店"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.296128,
+          22.616586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "亞蒂米德式廚房"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.297508,
+          22.623637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sapulo 糕餅小舖"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.282616,
+          22.625667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "高鐵新竹站"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0403252,
+          24.8081324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "花蓮鯉魚潭"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.505907,
+          23.928386
+        ]
+      }
+    }
+  ]
+}
