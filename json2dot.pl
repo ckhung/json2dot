@@ -3,9 +3,16 @@
 use strict;
 use JSON;
 use File::Slurp;
+binmode(STDIN, ':utf8');
 binmode(STDOUT, ':utf8');
 
-my $D = read_file($ARGV[0], binmode =>':utf8');
+my $D;
+
+if ($ARGV[0]) {
+    $D = read_file($ARGV[0], binmode =>':utf8');
+} else {
+    $D = do { local $/; <STDIN> };
+}
 
 $D = from_json($D);
 
