@@ -61,7 +61,6 @@ and manually edited to remove empty fields.
 
 ## 使用
 
-Try it out with the included sample file favourites.geojson:
 請拿範例資料檔 favourites.geojson 來測試：
 `json2dot.pl favourites.geojson > favourites.dot ;
 dot -Tsvg favourites.dot > favourites.svg`
