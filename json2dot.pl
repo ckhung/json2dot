@@ -34,6 +34,23 @@ struct2dot("root", $D);
 
 print "}\n";
 
+sub should_we_descend($) {
+    my $D = shift;
+    return 0 unless ref $D;
+    return 0 if ref $D eq "JSON::XS::Boolean";
+    return 1;
+}
+
+sub escape_chars($) {
+     my $t = shift;
+     $t = "<null>" unless defined $t;
+     $t =~ s!\&!&amp;!g;
+     $t =~ s!\"!&quot;!g;
+     $t =~ s!\<!&lt;!g;
+     $t =~ s!\>!&gt;!g;
+     $t
+}
+
 sub struct2dot {
     my ($parent, $D) = @_;
     my ($i, $k, $c, $nbsp);
@@ -41,18 +58,19 @@ sub struct2dot {
 	my $name = next_name();
 	print $name;
 	print qq([label=<\n<table border="0" cellborder="1" cellspacing="0">\n);
+	print "<tr><td>empty array</td></tr>" if $#$D == -1;
 	for ($i=0; $i<=$#$D; ++$i) {
-	    if (ref $D->[$i]) {
+        if (should_we_descend($D->[$i])) {
 		$c = $nbsp ? "" : "&nbsp;" x 4;
 		$nbsp = 1;
 	    } else {
-		$c = $D->[$i];
+		$c = escape_chars($D->[$i]);
 	    }
 	    print qq(<tr><td border="0">$i</td><td PORT="p_$i">$c</td></tr>);
 	}
 	print qq(</table>>];\n\n);
 	for ($i=0; $i<=$#$D; ++$i) {
-	    struct2dot("$name:p_$i", $D->[$i]) if (ref $D->[$i]);
+	    struct2dot("$name:p_$i", $D->[$i]) if (should_we_descend($D->[$i]));
 	}
 	print "$parent -> $name\n";
     } elsif (ref $D eq 'HASH') {
@@ -61,12 +79,13 @@ sub struct2dot {
 	print qq([label=<\n<table border="0" cellborder="1" cellspacing="0">\n);
 	$i = 0;
 	my @keys = keys %$D;
+	print "<tr><td>empty object</td></tr>" if $#keys == -1;
 	foreach $k (@keys) {
-	    if (ref $D->{$k}) {
+	    if (should_we_descend($D->{$k})) {
 		$c = $nbsp ? "" : "&nbsp;" x 4;
 		$nbsp = 1;
 	    } else {
-		$c = $D->{$k};
+		$c = escape_chars($D->{$k});
 	    }
 	    print qq(<tr><td>$k</td><td PORT="p_$i">$c</td></tr>);
 	    ++$i;
@@ -75,11 +94,11 @@ sub struct2dot {
 	print "$parent -> $name\n";
 	$i = 0;
 	foreach $k (@keys) {
-	    struct2dot("$name:p_$i", $D->{$k}) if (ref $D->{$k});
+	    struct2dot("$name:p_$i", $D->{$k}) if (should_we_descend($D->{$k}));
 	    ++$i;
 	}
     } else {
-	print STDERR "warning: '$D' ignored\n";
+	print STDERR "warning: '$D' ignored, type is ".(ref $D)."\n";
     }
 }
 
