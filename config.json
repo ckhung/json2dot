@@ -1,0 +1,32 @@
+{
+  "source": {
+    "csv": "satellites.csv",
+    "textcols": ["name", "planet"],
+    "pkey": "name",
+    "keep": "radius > 100"
+  },
+  "plotly": {
+    "layout": {
+      "title": "太陽系天然衛星軌道常數",
+      "xaxis": { "type": "log" },
+      "yaxis": { "type": "log" }
+    },
+    "maintrace": {
+      "xaxis": { "expr": "orbit_major" },
+      "yaxis": { "expr": "rev_cycle" },
+      "size": { "expr": "sqrt(radius)" },
+      "maintext": "name",
+      "hovertext": "name 繞 planet",
+      "color": {
+        "default": "#000",
+        "colname": "planet",
+        "palette": {
+  	"Jupiter": "#4c0",
+  	"Saturn": "#f00",
+  	"Uranus": "#40f",
+  	"Neptune": "#04f"
+        }
+      }
+    }
+  }
+}

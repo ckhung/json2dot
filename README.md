@@ -11,12 +11,19 @@ this program is useful not only for javascript
 courses and documents, but also useful for
 creating illustrations for tutorials for
 perl, python, php, ruby, ...
+
+For example, the following drawing is created by the command
+`perl json2dot.pl config.json | dot -Tsvg > config.svg`
+where config.json is a sample configuration file for
+my other project [scatplot](https://github.com/ckhung/scatplot)
+
+![visualization of config.json](https://raw.githubusercontent.com/ckhung/json2dot/master/config.svg)
  
 ## Installation
 
-On lubuntu 16.04 (and I guess on \*buntu and on
+On linux mint 20 (and I guess on \*ubuntu and on
 any of the whole debian family), please do
-`sudo apt-get install libjson-perl libfile-slurp-perl graphviz` .
+`sudo apt-get install libjson-perl libfile-slurp-perl libhtml-escape-perl graphviz` .
 Users of other distributions, please find the
 corresponding packages in your distribution.
 It may also work if you install these two perl modules from cpan instead.
@@ -49,10 +56,17 @@ and manually edited to remove empty fields.
 所以本程式不僅適用於 javascript 課程與文件，
 也很適用於幫 perl、 python、 php、 ruby、 ... 等等語言的教學文製作插圖。
 
+例如上圖就是這樣產生的：
+`perl json2dot.pl config.json | dot -Tsvg > config.svg`
+其中 config.json 來自我的另一個專案
+[scatplot](https://github.com/ckhung/scatplot)
+
+
 ## 安裝
 
-在 lubuntu 16.04 上 (我猜在 \*buntu 跟 debian 系列上面也一樣)
-請下： `sudo apt-get install libjson-perl libfile-slurp-perl graphviz` 。
+在 linux mint 20 上 (我猜在 \*ubuntu 跟 debian 系列上面也一樣)
+請下： `sudo apt-get install libjson-perl libfile-slurp-perl
+libhtml-escape-perl graphviz` 。
 其他版本 linux 用戶請找到你的版本裡對應的套件。
 或是直接從 cpan 安裝應該也可以。
 至於 graphviz 則是要用來把 .dot 檔轉成 .svg/.jpg/.png 的工具。

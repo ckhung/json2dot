@@ -3,6 +3,7 @@
 use strict;
 use JSON;
 use File::Slurp;
+use HTML::Escape qw(escape_html);
 binmode(STDIN, ':utf8');
 binmode(STDOUT, ':utf8');
 
@@ -46,7 +47,7 @@ sub struct2dot {
 		$c = $nbsp ? "" : "&nbsp;" x 4;
 		$nbsp = 1;
 	    } else {
-		$c = $D->[$i];
+		$c = escape_html($D->[$i]);
 	    }
 	    print qq(<tr><td border="0">$i</td><td PORT="p_$i">$c</td></tr>);
 	}
@@ -66,7 +67,7 @@ sub struct2dot {
 		$c = $nbsp ? "" : "&nbsp;" x 4;
 		$nbsp = 1;
 	    } else {
-		$c = $D->{$k};
+		$c = escape_html($D->{$k});
 	    }
 	    print qq(<tr><td>$k</td><td PORT="p_$i">$c</td></tr>);
 	    ++$i;
